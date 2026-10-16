@@ -1,11 +1,464 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>BEAUTY LINE | Atelier Privé & Haute Cosmétique</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            950: '#0c0c0e',
+                            900: '#111114',
+                            850: '#16161a',
+                            800: '#1c1c22',
+                        },
+                        gold: {
+                            light: '#F4E0A5',
+                            DEFAULT: '#D4AF37',
+                            dark: '#AA820A',
+                            rose: '#E6C280'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Textura de Piedra Pizarra Negra con Destellos Orgánicos */
+        .bg-black-stone {
+            background-color: #0c0c0e;
+            background-image: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                              radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px;
+        }
+
+        /* Tarjetas Curvas Orgánicas con Efecto Piedra Esculpida */
+        .stone-card-curved {
+            background: linear-gradient(145deg, rgba(22, 22, 27, 0.9) 0%, rgba(15, 15, 18, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(212, 175, 55, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .stone-card-curved:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(212, 175, 55, 0.8);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15), inset 0 1px 3px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Marco de Fotografía Orgánico y Circular */
+        .product-circle-frame {
+            border-radius: 50%;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            padding: 6px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(0,0,0,0.5) 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 50%, #997A15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-pill-button {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+            color: #0c0c0e;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+
+        .gold-pill-button:hover {
+            background: linear-gradient(135deg, #F4E0A5 0%, #D4AF37 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .gold-outline-pill {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+
+        .gold-outline-pill:hover {
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+            color: #F4E0A5;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0c0c0e;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-200 font-sans selection:bg-gold selection:text-black-stone overflow-x-hidden custom-scrollbar bg-black-stone">
+
+    <!-- Top Announcement Bar Curvado -->
+    <div class="bg-black/80 backdrop-blur-md border-b border-gold/30 text-[11px] py-2.5 px-4 text-center tracking-widest text-gold-rose font-cinzel">
+        <span class="inline-block animate-pulse mr-2 text-gold">✦</span> 
+        ATELIER PRIVÉ BEAUTY LINE — ATENCIÓN EXCLUSIVA Y RESERVA DE INVENTARIO VÍA CONCIERGE
+        <span class="inline-block animate-pulse ml-2 text-gold">✦</span>
+    </div>
+
+    <!-- Navigation Bar Curvada -->
+    <nav class="sticky top-4 z-50 mx-4 lg:mx-12 my-2 bg-stone-950/80 backdrop-blur-lg border border-gold/30 rounded-full px-6 lg:px-10 py-3.5 flex items-center justify-between shadow-2xl">
+        <div class="flex items-center space-x-6">
+            <button class="text-gold text-lg md:hidden"><i class="fas fa-bars"></i></button>
+            <a href="#" class="font-cinzel text-xl lg:text-2xl tracking-[0.25em] font-bold text-gold-gradient">
+                BEAUTY LINE
+            </a>
+        </div>
+
+        <div class="hidden md:flex space-x-8 text-[11px] font-cinzel tracking-widest text-stone-300">
+            <a href="#colecciones" class="hover:text-gold transition">COLECCIONES VIP</a>
+            <a href="#skincare" class="hover:text-gold transition">SKINCARE & TONOS</a>
+            <a href="#flagships" class="hover:text-gold transition">FLAGSHIPS MUNDIALES</a>
+        </div>
+
+        <div class="flex items-center">
+            <button onclick="openConciergeModal('Consulta General de Stock')" class="gold-pill-button text-[11px] font-cinzel tracking-widest font-bold px-5 py-2.5 flex items-center gap-2">
+                <i class="fab fa-whatsapp text-sm"></i> VIP CONCIERGE
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section con Formas Curvas -->
+    <section class="relative min-h-[80vh] flex items-center justify-center text-center px-4 overflow-hidden border-b border-gold/20 py-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=2000" alt="Luxury Atelier" class="w-full h-full object-cover opacity-20 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-b from-stone-950/90 via-stone-950/60 to-stone-950"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto space-y-6">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-gold/40 bg-stone-900/60 backdrop-blur-md">
+                <p class="font-cinzel text-[10px] md:text-xs tracking-[0.35em] text-gold uppercase">Maison De Haute Cosmétique</p>
+            </div>
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-stone-100 tracking-wide leading-tight">
+                El Arte Esculpido en <br><span class="text-gold-gradient italic font-normal">Piedra, Curvas & Oro</span>
+            </h1>
+            <p class="text-stone-300 max-w-2xl mx-auto text-sm md:text-base font-light tracking-wide leading-relaxed">
+                Elegancia fluida en formulaciones botánicas. Envueltas en frascos orgánicos y finamente terminados para la alta sociedad internacional.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#skincare" class="gold-pill-button font-cinzel text-xs font-bold px-8 py-3.5 tracking-widest uppercase">
+                    Ver Diagnóstico de Tonos
+                </a>
+                <a href="#colecciones" class="gold-outline-pill font-cinzel text-xs text-gold font-bold px-8 py-3.5 tracking-widest uppercase">
+                    Colección Obsidiana
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Skincare & Tone Types Selector con Formas Circulares -->
+    <section id="skincare" class="py-20 px-6 lg:px-16 max-w-7xl mx-auto border-b border-gold/20">
+        <div class="text-center space-y-3 mb-12">
+            <p class="font-cinzel text-xs tracking-[0.3em] text-gold uppercase">Diagnóstico Fisiológico</p>
+            <h2 class="font-serif text-3xl md:text-5xl text-stone-100">Matriz de Skincare y Tonos de Piel</h2>
+            <div class="w-32 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-4"></div>
+        </div>
+
+        <!-- Filter Tabs Curvados -->
+        <div class="flex flex-wrap justify-center gap-3 mb-16 text-xs font-cinzel">
+            <button onclick="filterSkin('all', event)" class="skin-btn gold-pill-button px-6 py-2.5 font-semibold text-stone-950">TODOS LOS TRATAMIENTOS</button>
+            <button onclick="filterSkin('seco', event)" class="skin-btn gold-outline-pill text-stone-300 px-6 py-2.5">PIEL SECA / REJUVENECIMIENTO</button>
+            <button onclick="filterSkin('combinado', event)" class="skin-btn gold-outline-pill text-stone-300 px-6 py-2.5">PIEL MIXTA / MATIFICANTE</button>
+            <button onclick="filterSkin('sensible', event)" class="skin-btn gold-outline-pill text-stone-300 px-6 py-2.5">PIEL SENSIBLE / BOTÁNICA</button>
+        </div>
+
+        <!-- Skincare Grid con Imagen Circulares y Tarjetas Curvas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="skincare-grid">
+            
+            <!-- Producto 1 -->
+            <div class="skin-card stone-card-curved p-8 flex flex-col justify-between items-center text-center" data-type="seco">
+                <div class="w-full flex flex-col items-center">
+                    <span class="text-[10px] font-cinzel text-gold tracking-widest border border-gold/30 rounded-full px-4 py-1 bg-stone-900/50 mb-6">ELIXIR REGENERATIVO</span>
+                    
+                    <!-- Imagen en Marco Circular -->
+                    <div class="product-circle-frame w-48 h-48 mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=800" alt="Black Rose Elixir" class="w-full h-full object-cover rounded-full hover:scale-110 transition duration-500">
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-stone-100 mb-2">Black Rose & Diamond Nectar</h3>
+                    <p class="text-xs text-stone-400 font-light leading-relaxed mb-6 max-w-xs">
+                        Enriquecido con polvo de diamante negro y células madre de rosa salvaje para restauración profunda.
+                    </p>
+
+                    <!-- Paleta de Tonos Circulares -->
+                    <div class="space-y-2 mb-8">
+                        <p class="text-[10px] font-cinzel text-gold tracking-widest uppercase">Subtonos Recomendados</p>
+                        <div class="flex justify-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-[#f3e5d8] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Porcelana Cálida"></span>
+                            <span class="w-5 h-5 rounded-full bg-[#e8c8b0] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Nude Dorado"></span>
+                            <span class="w-5 h-5 rounded-full bg-[#ad7a56] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Bronce Profundo"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="openConciergeModal('Black Rose & Diamond Nectar')" class="gold-outline-pill w-full text-gold font-cinzel text-xs py-3.5 font-bold tracking-widest uppercase">
+                    Consultar Stock a Concierge
+                </button>
+            </div>
+
+            <!-- Producto 2 (Imagen Actualizada Corregida) -->
+            <div class="skin-card stone-card-curved p-8 flex flex-col justify-between items-center text-center" data-type="combinado">
+                <div class="w-full flex flex-col items-center">
+                    <span class="text-[10px] font-cinzel text-gold tracking-widest border border-gold/30 rounded-full px-4 py-1 bg-stone-900/50 mb-6">SUERO MATIFICANTE</span>
+                    
+                    <!-- Imagen en Marco Circular -->
+                    <div class="product-circle-frame w-48 h-48 mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=800" alt="Slate Velvet Essence" class="w-full h-full object-cover rounded-full hover:scale-110 transition duration-500">
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-stone-100 mb-2">Slate Velvet Botanical Essence</h3>
+                    <p class="text-xs text-stone-400 font-light leading-relaxed mb-6 max-w-xs">
+                        Fórmula mineral con extracto de piedra volcánica que equilibra el sebo facial dejando acabado mate terciopelo.
+                    </p>
+
+                    <!-- Paleta de Tonos Circulares -->
+                    <div class="space-y-2 mb-8">
+                        <p class="text-[10px] font-cinzel text-gold tracking-widest uppercase">Subtonos Recomendados</p>
+                        <div class="flex justify-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-[#f1d7c3] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Ivory Marfil"></span>
+                            <span class="w-5 h-5 rounded-full bg-[#cfa178] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Oliva Medio"></span>
+                            <span class="w-5 h-5 rounded-full bg-[#6d462f] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Ébano Rico"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="openConciergeModal('Slate Velvet Botanical Essence')" class="gold-outline-pill w-full text-gold font-cinzel text-xs py-3.5 font-bold tracking-widest uppercase">
+                    Consultar Stock a Concierge
+                </button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="skin-card stone-card-curved p-8 flex flex-col justify-between items-center text-center" data-type="sensible">
+                <div class="w-full flex flex-col items-center">
+                    <span class="text-[10px] font-cinzel text-gold tracking-widest border border-gold/30 rounded-full px-4 py-1 bg-stone-900/50 mb-6">CALMANTE BOTÁNICO</span>
+                    
+                    <!-- Imagen en Marco Circular -->
+                    <div class="product-circle-frame w-48 h-48 mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1608248597263-00079e96047c?q=80&w=800" alt="Gold Quartz Soothing Concentrate" class="w-full h-full object-cover rounded-full hover:scale-110 transition duration-500">
+                    </div>
+
+                    <h3 class="font-serif text-2xl text-stone-100 mb-2">Gold Quartz Infusion Oil</h3>
+                    <p class="text-xs text-stone-400 font-light leading-relaxed mb-6 max-w-xs">
+                        Micro-partículas de cuarzo y orquídea dorada para pieles extremadamente sensibles y reactivas.
+                    </p>
+
+                    <!-- Paleta de Tonos Circulares -->
+                    <div class="space-y-2 mb-8">
+                        <p class="text-[10px] font-cinzel text-gold tracking-widest uppercase">Subtonos Recomendados</p>
+                        <div class="flex justify-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-[#fbeade] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Alabastro Rosa"></span>
+                            <span class="w-5 h-5 rounded-full bg-[#dfb28e] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Miel Neutro"></span>
+                            <span class="w-5 h-5 rounded-full bg-[#8c593a] border-2 border-gold/60 shadow-md hover:scale-125 transition" title="Cacao Cálido"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="openConciergeModal('Gold Quartz Infusion Oil')" class="gold-outline-pill w-full text-gold font-cinzel text-xs py-3.5 font-bold tracking-widest uppercase">
+                    Consultar Stock a Concierge
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Makeup & Stone Luxe Collection con Marcos Ovales -->
+    <section id="colecciones" class="py-20 px-6 lg:px-16 max-w-7xl mx-auto border-b border-gold/20">
+        <div class="text-center space-y-3 mb-16">
+            <p class="font-cinzel text-xs tracking-[0.3em] text-gold uppercase">Edición Limitada</p>
+            <h2 class="font-serif text-3xl md:text-5xl text-stone-100">Colección Obsidiana & Oro</h2>
+            <p class="text-stone-400 text-sm max-w-xl mx-auto font-light">
+                Cada envase ha sido esculpido de una sola pieza en piedra mineral negra con detalles bañados en oro puro.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Item 1 -->
+            <div class="stone-card-curved p-8 text-center space-y-5 flex flex-col items-center">
+                <div class="w-full h-64 rounded-[2.5rem] overflow-hidden border border-gold/30 relative">
+                    <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=800" alt="Obsidian Matte Lipstick" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    <span class="absolute top-4 right-4 bg-stone-950/90 text-gold text-[10px] font-cinzel px-3 py-1 rounded-full border border-gold/30">LOTE Nº 004</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-100">Obsidian Liquid Velvet</h3>
+                <p class="text-xs text-stone-400 font-light max-w-xs">Pigmentación intensa de 24 horas con acabado aterciopelado orgánico.</p>
+                <div class="text-gold font-cinzel text-sm font-bold tracking-widest">DISPONIBILIDAD LIMITADA</div>
+                <button onclick="openConciergeModal('Obsidian Liquid Velvet')" class="gold-pill-button w-full font-cinzel text-xs font-bold py-3.5 uppercase tracking-widest">
+                    Preguntar Stock
+                </button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="stone-card-curved p-8 text-center space-y-5 flex flex-col items-center">
+                <div class="w-full h-64 rounded-[2.5rem] overflow-hidden border border-gold/30 relative">
+                    <img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?q=80&w=800" alt="Stone Compact Illuminator" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    <span class="absolute top-4 right-4 bg-stone-950/90 text-gold text-[10px] font-cinzel px-3 py-1 rounded-full border border-gold/30">RESERVA PRIVADA</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-100">24K Mineral Glow</h3>
+                <p class="text-xs text-stone-400 font-light max-w-xs">Polvo compacto con cuarzo pulverizado para un brillo tridimensional.</p>
+                <div class="text-gold font-cinzel text-sm font-bold tracking-widest">RESERVA BAJO PEDIDO</div>
+                <button onclick="openConciergeModal('24K Mineral Glow')" class="gold-pill-button w-full font-cinzel text-xs font-bold py-3.5 uppercase tracking-widest">
+                    Preguntar Stock
+                </button>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="stone-card-curved p-8 text-center space-y-5 flex flex-col items-center">
+                <div class="w-full h-64 rounded-[2.5rem] overflow-hidden border border-gold/30 relative">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800" alt="Royal Eye Palette" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    <span class="absolute top-4 right-4 bg-stone-950/90 text-gold text-[10px] font-cinzel px-3 py-1 rounded-full border border-gold/30">HAUTE COUTURE</span>
+                </div>
+                <h3 class="font-serif text-2xl text-stone-100">Imperial Stone Palette</h3>
+                <p class="text-xs text-stone-400 font-light max-w-xs">12 pigmentos prensados enriquecidos con partículas de amatista y pirita.</p>
+                <div class="text-gold font-cinzel text-sm font-bold tracking-widest">ÚLTIMAS PIEZAS</div>
+                <button onclick="openConciergeModal('Imperial Stone Palette')" class="gold-pill-button w-full font-cinzel text-xs font-bold py-3.5 uppercase tracking-widest">
+                    Preguntar Stock
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Flagships Curvados -->
+    <section id="flagships" class="py-20 px-6 lg:px-16 max-w-7xl mx-auto border-b border-gold/20 text-center">
+        <p class="font-cinzel text-xs tracking-[0.3em] text-gold uppercase mb-2">Presencia Global Exclusiva</p>
+        <h2 class="font-serif text-3xl md:text-4xl text-stone-100 mb-12">Ateliers & Salones Privados</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-stone-300 font-cinzel text-xs">
+            <div class="p-8 stone-card-curved space-y-3">
+                <i class="fas fa-gem text-gold text-3xl mb-2"></i>
+                <h4 class="font-bold text-stone-100 text-sm">PARÍS</h4>
+                <p class="text-stone-400 font-sans text-[11px]">Place Vendôme, 12</p>
+            </div>
+            <div class="p-8 stone-card-curved space-y-3">
+                <i class="fas fa-crown text-gold text-3xl mb-2"></i>
+                <h4 class="font-bold text-stone-100 text-sm">NUEVA YORK</h4>
+                <p class="text-stone-400 font-sans text-[11px]">5th Avenue, 740</p>
+            </div>
+            <div class="p-8 stone-card-curved space-y-3">
+                <i class="fas fa-star text-gold text-3xl mb-2"></i>
+                <h4 class="font-bold text-stone-100 text-sm">DUBÁI</h4>
+                <p class="text-stone-400 font-sans text-[11px]">Fashion Avenue, Mall</p>
+            </div>
+            <div class="p-8 stone-card-curved space-y-3">
+                <i class="fas fa-chess-queen text-gold text-3xl mb-2"></i>
+                <h4 class="font-bold text-stone-100 text-sm">TOKIO</h4>
+                <p class="text-stone-400 font-sans text-[11px]">Ginza Six, Tower 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 lg:px-16 text-center text-xs text-stone-500 font-cinzel space-y-4">
+        <div class="text-gold-gradient text-2xl font-bold tracking-widest">BEAUTY LINE</div>
+        <p>© 2026 BEAUTY LINE INTERNATIONAL MAISON. TODOS LOS DERECHOS RESERVADOS.</p>
+        <p class="text-[10px] text-stone-600">ATENCIÓN PERSONALIZADA Y VENTAS EXCLUSIVAS MEDIANTE CONCIERGE PRIVADO.</p>
+    </footer>
+
+    <!-- Concierge Modal Curvado -->
+    <div id="conciergeModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="stone-card-curved max-w-lg w-full p-8 relative">
+            <button onclick="closeConciergeModal()" class="absolute top-5 right-6 text-stone-400 hover:text-gold text-2xl">&times;</button>
+            <div class="text-center space-y-3 mb-6">
+                <i class="fab fa-whatsapp text-4xl text-gold"></i>
+                <h3 class="font-serif text-2xl text-stone-100">Consultoría VIP</h3>
+                <p class="text-xs text-stone-400">Consulta disponibilidad de inventario directamente con el Atelier Central.</p>
+            </div>
+
+            <form id="conciergeForm" onsubmit="handleConciergeSubmit(event)" class="space-y-4 text-xs font-sans">
+                <div>
+                    <label class="block text-gold font-cinzel mb-1">Producto Solicitado</label>
+                    <input type="text" id="modalProductName" class="w-full bg-stone-900/80 border border-gold/30 rounded-xl px-4 py-2.5 text-stone-100 focus:outline-none focus:border-gold" readonly>
+                </div>
+                <div>
+                    <label class="block text-gold font-cinzel mb-1">Nombre Completo</label>
+                    <input type="text" required placeholder="Ej. Lady Eleanor Vance" class="w-full bg-stone-900/80 border border-gold/30 rounded-xl px-4 py-2.5 text-stone-100 focus:outline-none focus:border-gold">
+                </div>
+                <div>
+                    <label class="block text-gold font-cinzel mb-1">Atelier Preferido</label>
+                    <select class="w-full bg-stone-900/80 border border-gold/30 rounded-xl px-4 py-2.5 text-stone-100 focus:outline-none focus:border-gold">
+                        <option>Atelier Virtual Directo</option>
+                        <option>París - Place Vendôme</option>
+                        <option>Nueva York - 5th Ave</option>
+                        <option>Dubái - Fashion Avenue</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gold font-cinzel mb-1">Especificación de Tonos / Mensaje</label>
+                    <textarea rows="3" placeholder="Indica el tono deseado o si requieres asesoría para tu tipo de piel..." class="w-full bg-stone-900/80 border border-gold/30 rounded-xl px-4 py-2.5 text-stone-100 focus:outline-none focus:border-gold"></textarea>
+                </div>
+                <button type="submit" class="gold-pill-button w-full font-cinzel font-bold py-3.5 uppercase tracking-widest text-xs mt-2">
+                    Enviar Consulta a WhatsApp VIP
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script de Interactividad -->
+    <script>
+        function openConciergeModal(productName) {
+            document.getElementById('modalProductName').value = productName;
+            document.getElementById('conciergeModal').classList.remove('hidden');
+        }
+
+        function closeConciergeModal() {
+            document.getElementById('conciergeModal').classList.add('hidden');
+        }
+
+        function handleConciergeSubmit(e) {
+            e.preventDefault();
+            const product = document.getElementById('modalProductName').value;
+            const message = encodeURIComponent(`Hola BEAUTY LINE Concierge, deseo consultar el stock y disponibilidad del producto: ${product}.`);
+            window.open(`https://wa.me/59100000000?text=${message}`, '_blank');
+            closeConciergeModal();
+        }
+
+        function filterSkin(type, evt) {
+            const cards = document.querySelectorAll('.skin-card');
+            const btns = document.querySelectorAll('.skin-btn');
+
+            btns.forEach(btn => {
+                btn.className = 'skin-btn gold-outline-pill text-stone-300 px-6 py-2.5';
+            });
+
+            if (evt && evt.target) {
+                evt.target.className = 'skin-btn gold-pill-button px-6 py-2.5 font-semibold text-stone-950';
+            }
+
+            cards.forEach(card => {
+                if(type === 'all' || card.dataset.type === type) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

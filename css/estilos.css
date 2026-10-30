@@ -556,3 +556,32 @@ a {
         height: 250px;
     }
 }
+
+
+
+/* INTEGRACIÓN DE LA IMAGEN PRINCIPAL */
+.product-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+
+    mix-blend-mode: screen;
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        #000 48%,
+        rgba(0, 0, 0, 0.85) 68%,
+        transparent 100%
+    );
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        #000 48%,
+        rgba(0, 0, 0, 0.85) 68%,
+        transparent 100%
+    );
+
+    filter: brightness(1.08) contrast(1.05);
+}

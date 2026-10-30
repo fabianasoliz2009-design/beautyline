@@ -1,0 +1,558 @@
+
+/* ==========================================
+   BEAUTY LINE
+   Diseño elegante: negro, piedra y champagne
+   ========================================== */
+
+:root {
+    --black: #111010;
+    --black-soft: #191716;
+    --gold: #c9a65b;
+    --gold-light: #e4cc94;
+    --white: #f7f3e9;
+    --gray: #c4beb3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
+
+.header {
+    position: relative;
+    z-index: 20;
+    background: #111010;
+    border-bottom: 1px solid rgba(201,166,91,.3);
+}
+
+.navbar {
+    max-width: 1450px;
+    min-height: 88px;
+    margin: auto;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo,
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.logo span,
+.footer-logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #ded8cd;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light);
+}
+
+.nav-button {
+    padding: 13px 22px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: .3s;
+}
+
+.nav-button:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   PORTADA PRINCIPAL
+   ========================================== */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Fondo de piedra */
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(15,14,13,.94) 0%,
+            rgba(15,14,13,.84) 48%,
+            rgba(15,14,13,.35) 100%
+        ),
+        url("../img/banners/fondo-negro-dorado.jpg");
+
+    background-position: center;
+    background-size: cover;
+}
+
+/* Capa de iluminación */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 50%,
+            rgba(201,166,91,.13),
+            transparent 48%
+        );
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 65px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+/* ==========================================
+   TEXTO DE PORTADA
+   ========================================== */
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-eyebrow {
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 6vw, 86px);
+    font-weight: 500;
+    line-height: .98;
+    letter-spacing: 1px;
+    color: var(--white);
+}
+
+.hero-content h1 span {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.gold-line {
+    width: 85px;
+    height: 2px;
+    margin: 28px 0;
+    background: linear-gradient(
+        90deg,
+        var(--gold),
+        transparent
+    );
+}
+
+.hero-description {
+    max-width: 440px;
+    font-size: 13px;
+    line-height: 2;
+    font-weight: 300;
+    color: var(--gray);
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.button-primary,
+.button-secondary {
+    min-height: 52px;
+    padding: 16px 23px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+
+    transition: .3s ease;
+}
+
+.button-primary {
+    background: var(--white);
+    color: #171513;
+    border: 1px solid var(--white);
+}
+
+.button-primary:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.button-primary span {
+    font-size: 17px;
+}
+
+.button-secondary {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+}
+
+.button-secondary:hover {
+    background: var(--gold);
+    color: var(--black);
+    transform: translateY(-3px);
+}
+
+.hero-footer-text {
+    margin-top: 48px;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #a99a7c;
+}
+
+/* ==========================================
+   IMAGEN DE PRODUCTOS
+   ========================================== */
+
+.hero-product {
+    width: 100%;
+    max-width: 590px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 470px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 35px rgba(0,0,0,.5));
+}
+
+.product-decoration {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 1px solid rgba(201,166,91,.22);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* ==========================================
+   SECCIONES INFERIORES
+   ========================================== */
+
+.intro-section,
+.products-section,
+.about-section {
+    padding: 100px 7%;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,166,91,.18);
+}
+
+.section-eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.intro-section h2,
+.products-section h2,
+.about-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.intro-section h2 span {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.intro-section > p:not(.section-eyebrow),
+.section-description,
+.about-content > p:not(.section-eyebrow) {
+    max-width: 650px;
+    margin: auto;
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 2;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: var(--gold-light);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.text-link:hover {
+    color: var(--white);
+}
+
+.about-section {
+    background: linear-gradient(120deg, #111010, #1b1915);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ==========================================
+   PIE DE PÁGINA
+   ========================================== */
+
+.footer {
+    padding: 55px 20px;
+    text-align: center;
+    background: #0c0b0b;
+}
+
+.footer p {
+    margin-top: 15px;
+    color: var(--gray);
+    font-size: 11px;
+}
+
+.footer .copyright {
+    margin-top: 30px;
+    color: #827b70;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   TABLETS
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero-container {
+        padding: 55px 5%;
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 58px;
+    }
+
+    .product-image {
+        height: 390px;
+    }
+}
+
+/* ==========================================
+   CELULARES
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 75px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .nav-button {
+        margin-left: auto;
+        padding: 11px 13px;
+        font-size: 8px;
+    }
+
+    .nav-links {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 25px 0;
+        border-top: 1px solid rgba(201,166,91,.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        padding: 65px 7% 45px;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-eyebrow {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(49px, 12vw, 65px);
+    }
+
+    .gold-line {
+        margin: 23px auto;
+    }
+
+    .hero-description {
+        margin: auto;
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .button-primary,
+    .button-secondary {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-footer-text {
+        margin-top: 30px;
+        font-size: 7px;
+    }
+
+    .hero-product {
+        max-width: 440px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .intro-section,
+    .products-section,
+    .about-section {
+        padding: 70px 7%;
+    }
+}
+
+/* ==========================================
+   CELULARES PEQUEÑOS
+   ========================================== */
+
+@media (max-width: 380px) {
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+}

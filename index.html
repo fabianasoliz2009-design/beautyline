@@ -1,127 +1,167 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BEAUTY LINE | El arte de revelar tu belleza</title>
 
-    <meta name="description" content="BEAUTY LINE: maquillaje, cosmética y cuidado personal con elegancia.">
+    <meta name="description" content="BEAUTY LINE: maquillaje, cosmética y cuidado personal con elegancia, inclusión y distinción.">
 
+    <!-- ESTILOS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
+    <!-- TIPOGRAFÍAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="img/logo/favicon.png">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
+    <!-- ==============================
+         ENCABEZADO Y NAVEGACIÓN
+    =============================== -->
+
     <header class="header">
+
         <nav class="navbar">
 
-            <a href="#inicio" class="logo">
+            <a href="index.html" class="logo">
                 BEAUTY <span>LINE</span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                type="button">
                 ☰
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">INICIO</a></li>
-                <li><a href="#colecciones">COLECCIONES</a></li>
-                <li><a href="#nosotros">NOSOTROS</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+
+                <li>
+                    <a href="index.html">INICIO</a>
+                </li>
+
+                <li>
+                    <a href="#colecciones">COLECCIONES</a>
+                </li>
+
+                <li>
+                    <a href="nosotros.html">NOSOTROS</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">CONTACTO</a>
+                </li>
+
             </ul>
 
-            <a href="#contacto" class="nav-button">VIP CONCIERGE</a>
+            <a href="contacto.html" class="nav-button">
+                VIP CONCIERGE
+            </a>
 
         </nav>
+
     </header>
 
 
-    <!-- PORTADA PRINCIPAL -->
-    <main>
+<!-- PORTADA PRINCIPAL BEAUTY LINE -->
 
-        <section class="hero" id="inicio">
+<section class="luxury-hero" id="inicio">
 
-            <!-- FONDO DE PIEDRA -->
-            <div class="hero-background"></div>
+    <div class="luxury-overlay"></div>
 
-            <!-- CAPA OSCURA -->
-            <div class="hero-overlay"></div>
+    <div class="luxury-container">
 
-            <div class="hero-container">
+        <!-- TEXTO PRINCIPAL -->
 
-                <!-- TEXTO A LA IZQUIERDA -->
-                <div class="hero-content">
+        <div class="luxury-content">
 
-                    <p class="hero-eyebrow">
-                        BELLEZA · ELEGANCIA · DISTINCIÓN
-                    </p>
+            <p class="luxury-eyebrow">
+                BEAUTY LINE · LUXURY COLLECTION
+            </p>
 
-                    <h1>
-                        EL ARTE DE<br>
-                        REVELAR TU<br>
-                        <span>BELLEZA.</span>
-                    </h1>
+            <h1>
+                LA BELLEZA<br>
+                NO SIGUE REGLAS.<br>
+                <span>LAS REDEFINE.</span>
+            </h1>
 
-                    <div class="gold-line"></div>
+            <div class="luxury-divider"></div>
 
-                    <p class="hero-description">
-                        Descubre una experiencia de belleza donde la
-                        sofisticación, el cuidado y la elegancia se
-                        encuentran en cada detalle.
-                    </p>
+            <p class="luxury-description">
+                Una experiencia de belleza creada para celebrar
+                tu esencia, tu individualidad y tu estilo.
+                Descubre el lujo de sentirte única.
+            </p>
 
-                    <div class="hero-buttons">
+            <div class="luxury-buttons">
 
-                        <a href="#colecciones" class="button-primary">
-                            DESCUBRIR COLECCIÓN
-                            <span>→</span>
-                        </a>
+                <a href="#colecciones" class="luxury-button-primary">
+                    DESCUBRIR COLECCIÓN
+                    <span>→</span>
+                </a>
 
-                        <a href="#productos" class="button-secondary">
-                            EXPLORAR PRODUCTOS
-                        </a>
-
-                    </div>
-
-                    <p class="hero-footer-text">
-                        BEAUTY LINE — LA BELLEZA EN CADA DETALLE
-                    </p>
-
-                </div>
-
-
-                <!-- PRODUCTOS A LA DERECHA -->
-                <div class="hero-product">
-
-                    <img
-                       src="img/banners/portada-beauty-line.jfif"
-                       alt="Colección de productos BEAUTY LINE"
-                       class="product-image"
-                    >
-
-                    <div class="product-decoration"></div>
-
-                </div>
+                <a href="nosotros.html" class="luxury-button-secondary">
+                    NUESTRA ESENCIA
+                </a>
 
             </div>
 
-        </section>
+            <p class="luxury-signature">
+                ELEGANCIA · INCLUSIÓN · AUTENTICIDAD
+            </p>
+
+        </div>
+
+
+        <!-- IMAGEN DE PRODUCTOS -->
+
+        <div class="luxury-visual">
+
+            <div class="luxury-image-frame">
+
+                <img
+                    src="img/banners/productos-portada.jpg"
+                    alt="Colección exclusiva de maquillaje BEAUTY LINE"
+                >
+
+            </div>
+
+            <div class="luxury-image-caption">
+                <span>BEAUTY LINE</span>
+                <span>THE ART OF BEAUTY</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="luxury-bottom">
+        <span>BEAUTY LINE</span>
+        <span>DISCOVER YOUR BEAUTY</span>
+    </div>
+
+</section>
+
 
 
         <!-- PRESENTACIÓN DE COLECCIONES -->
+
         <section class="intro-section" id="colecciones">
 
-            <p class="section-eyebrow">DESCUBRE BEAUTY LINE</p>
+            <p class="section-eyebrow">
+                DESCUBRE BEAUTY LINE
+            </p>
 
             <h2>
                 Una nueva expresión de
@@ -142,33 +182,51 @@
 
 
         <!-- ESPACIO PARA PRODUCTOS -->
+
         <section class="products-section" id="productos">
 
-            <p class="section-eyebrow">NUESTRA SELECCIÓN</p>
+            <p class="section-eyebrow">
+                NUESTRA SELECCIÓN
+            </p>
 
-            <h2>Productos destacados</h2>
+            <h2>
+                Productos destacados
+            </h2>
 
             <p class="section-description">
-                Próximamente descubrirás aquí nuestra colección de belleza.
+                Descubre próximamente nuestra colección de belleza,
+                seleccionada para ofrecerte calidad, estilo y elegancia.
             </p>
 
         </section>
 
 
-        <!-- NOSOTROS -->
+        <!-- PRESENTACIÓN DE LA MARCA -->
+
         <section class="about-section" id="nosotros">
 
             <div class="about-content">
-                <p class="section-eyebrow">NUESTRA ESENCIA</p>
 
-                <h2>La belleza es una expresión personal.</h2>
+                <p class="section-eyebrow">
+                    NUESTRA ESENCIA
+                </p>
+
+                <h2>
+                    La belleza es una expresión personal.
+                </h2>
 
                 <p>
                     En BEAUTY LINE creemos en una belleza que celebra
                     la individualidad, la confianza y el cuidado personal.
-                    Nuestra propuesta busca acercarte a productos
-                    que acompañen tu estilo.
+                    Nuestra propuesta busca acercarte a productos que
+                    acompañen tu estilo, respetando la diversidad
+                    y las características de cada persona.
                 </p>
+
+                <a href="nosotros.html" class="text-link">
+                    CONOCE NUESTRA HISTORIA →
+                </a>
+
             </div>
 
         </section>
@@ -176,14 +234,31 @@
     </main>
 
 
-    <!-- PIE DE PÁGINA -->
+    <!-- ==============================
+         PIE DE PÁGINA
+    =============================== -->
+
     <footer class="footer" id="contacto">
 
-        <a href="#inicio" class="footer-logo">
+        <a href="index.html" class="footer-logo">
             BEAUTY <span>LINE</span>
         </a>
 
-        <p>Elegancia y belleza en cada detalle.</p>
+        <p>
+            Elegancia y belleza en cada detalle.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Inicio</a>
+
+            <a href="productos.html">Productos</a>
+
+            <a href="nosotros.html">Nosotros</a>
+
+            <a href="contacto.html">Contacto</a>
+
+        </div>
 
         <p class="copyright">
             © 2026 BEAUTY LINE. Todos los derechos reservados.
@@ -192,25 +267,40 @@
     </footer>
 
 
-    <!-- MENÚ MÓVIL -->
+    <!-- ==============================
+         MENÚ PARA DISPOSITIVOS MÓVILES
+    =============================== -->
+
     <script>
+
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.getElementById("navLinks");
 
         menuToggle.addEventListener("click", () => {
+
             const isOpen = navLinks.classList.toggle("active");
 
             menuToggle.setAttribute("aria-expanded", isOpen);
+
             menuToggle.textContent = isOpen ? "✕" : "☰";
+
         });
 
+
         document.querySelectorAll(".nav-links a").forEach(link => {
+
             link.addEventListener("click", () => {
+
                 navLinks.classList.remove("active");
+
                 menuToggle.setAttribute("aria-expanded", "false");
+
                 menuToggle.textContent = "☰";
+
             });
+
         });
+
     </script>
 
 </body>

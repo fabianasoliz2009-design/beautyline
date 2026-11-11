@@ -8,7 +8,7 @@
 // Usa el código del país y el número, solo números.
 // Bolivia: 591 + número de teléfono.
 // Ejemplo ficticio: 59170000000
-const WHATSAPP = "59170000000";
+const WHATSAPP = "59171716971";
 
 // Productos de demostración.
 // Los precios son ejemplos en bolivianos (Bs).

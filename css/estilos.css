@@ -1340,3 +1340,546 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* =====================================
+   CATÁLOGO DE PRODUCTOS - BEAUTY LINE
+   ===================================== */
+
+.catalogo-section {
+    width: 100%;
+    padding: 100px 7%;
+    background: #111010;
+    text-align: center;
+}
+
+.catalogo-section .eyebrow {
+    color: #c9a96e;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+}
+
+.catalogo-section h2 {
+    color: #f4eee4;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 18px;
+}
+
+.catalogo-section h2 span {
+    color: #c9a96e;
+}
+
+.catalogo-descripcion {
+    color: #c5bdb2;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto 55px;
+    max-width: 600px;
+}
+
+/* CUADRÍCULA */
+
+.productos-grid {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+/* TARJETAS */
+
+.tarjeta-producto {
+    min-width: 0;
+    overflow: hidden;
+    background: #191817;
+    border: 1px solid rgba(201, 169, 110, 0.18);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-6px);
+    border-color: #c9a96e;
+}
+
+/* FOTOGRAFÍAS */
+
+.producto-imagen {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #242220;
+}
+
+.producto-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-producto:hover .producto-imagen img {
+    transform: scale(1.04);
+}
+
+/* INFORMACIÓN */
+
+.producto-info {
+    padding: 22px 15px;
+    text-align: center;
+}
+
+.producto-info h3 {
+    color: #f4eee4;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    margin: 0 0 18px;
+}
+
+/* BOTÓN DE WHATSAPP */
+
+.boton-agregar {
+    display: flex;
+    width: 100%;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+    background: transparent;
+    border: 1px solid #c9a96e;
+    color: #d7b77b;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-agregar:hover {
+    background: #c9a96e;
+    color: #111010;
+}
+
+/* ADAPTACIÓN A TABLETS Y CELULARES */
+
+@media (max-width: 1000px) {
+    .productos-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+    }
+}
+
+@media (max-width: 650px) {
+    .catalogo-section {
+        padding: 65px 5%;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .producto-info {
+        padding: 16px 10px;
+    }
+
+    .producto-info h3 {
+        font-size: 19px;
+    }
+
+    .boton-agregar {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.boton-ver-mas {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 16px 35px;
+    border: 1px solid #c9a96e;
+    color: #d7b77b;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.boton-ver-mas:hover {
+    background: #c9a96e;
+    color: #111010;
+}
+
+/* MEJORA DE NUESTRA ESENCIA */
+
+.about-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    color: #f4eee4;
+    margin-bottom: 25px;
+}
+
+.about-content h2 span {
+    display: block;
+    color: #c9a96e;
+    font-style: italic;
+}
+
+.about-content p {
+    color: #c5bdb2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.about-content .text-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #d7b77b;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 11px;
+    transition: color 0.3s ease;
+}
+
+.about-content .text-link:hover {
+    color: #f4eee4;
+}
+
+/* FONDO ESPECIAL - NUESTRA ESENCIA */
+
+.about-section {
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(201, 169, 110, 0.13),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #211d18,
+            #111010 55%,
+            #292117
+        );
+
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.25);
+}
+
+/* DETALLES ELEGANTES - NUESTRA ESENCIA */
+
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    position: relative;
+}
+
+.about-content::before {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #c9a96e;
+    margin: 0 auto 35px;
+}
+
+.about-content h2 {
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================================
+   PORTADA - NOSOTROS
+   ===================================== */
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #171410, #292117);
+}
+
+.about-hero-content {
+    max-width: 560px;
+}
+
+.about-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 6vw, 75px);
+    color: #f4eee4;
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.about-hero h1 span {
+    display: block;
+    color: #c9a96e;
+    font-style: italic;
+}
+
+.about-intro {
+    color: #d0c7ba;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.about-hero-image {
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 169, 110, 0.5);
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 650px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .about-hero-image {
+        height: 320px;
+    }
+}
+
+/* =====================================
+   NUESTRA FILOSOFÍA
+   ===================================== */
+
+.about-philosophy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+    padding: 100px 8%;
+    background: #f1ece3;
+}
+
+.philosophy-image {
+    height: 430px;
+    overflow: hidden;
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.philosophy-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    color: #211d18;
+    margin: 25px 0;
+}
+
+.philosophy-content h2 span {
+    display: block;
+    color: #a78348;
+    font-style: italic;
+}
+
+.philosophy-content > p:last-child {
+    color: #5c554b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+@media (max-width: 650px) {
+    .about-philosophy {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .philosophy-image {
+        height: 320px;
+    }
+}
+
+
+/* =====================================
+   VALORES FUNDAMENTALES
+   ===================================== */
+
+.about-values {
+    padding: 100px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #171410, #292117);
+}
+
+.about-values h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    color: #f4eee4;
+    margin: 20px 0 55px;
+}
+
+.about-values h2 span {
+    color: #c9a96e;
+    font-style: italic;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.value-card {
+    padding: 40px 25px;
+    border: 1px solid rgba(201, 169, 110, 0.35);
+    background: rgba(255, 255, 255, 0.025);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    border-color: #c9a96e;
+}
+
+.value-number {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #c9a96e;
+    margin-bottom: 25px;
+}
+
+.value-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    color: #f4eee4;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #c5bdb2;
+}
+
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 500px) {
+    .about-values {
+        padding: 70px 6%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================
+   MANIFIESTO BEAUTY LINE
+   ===================================== */
+
+.about-manifesto {
+    position: relative;
+    padding: 115px 12%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(201, 169, 110, 0.12), transparent 65%),
+        #111010;
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+    overflow: hidden;
+}
+
+.manifesto-symbol {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 100px;
+    line-height: 0.8;
+    color: #c9a96e;
+}
+
+.about-manifesto h2 {
+    max-width: 850px;
+    margin: 25px auto;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.2;
+    color: #f4eee4;
+}
+
+.about-manifesto h2 span {
+    display: block;
+    color: #c9a96e;
+    font-style: italic;
+}
+
+.manifesto-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #c5bdb2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.manifesto-line {
+    width: 65px;
+    height: 1px;
+    background: #c9a96e;
+    margin: 40px auto 25px;
+}
+
+.manifesto-signature {
+    color: #d7b77b;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+@media (max-width: 650px) {
+    .about-manifesto {
+        padding: 80px 7%;
+    }
+
+    .manifesto-symbol {
+        font-size: 75px;
+    }
+
+    .manifesto-description {
+        font-size: 12px;
+    }
+}
+
+

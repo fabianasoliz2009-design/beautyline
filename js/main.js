@@ -10,81 +10,39 @@
 // Ejemplo ficticio: 59170000000
 const WHATSAPP = "59171716971";
 
-// Productos de demostración.
-// Los precios son ejemplos en bolivianos (Bs).
 const productos = [
-    {
-        id: 1,
-        nombre: "Base Natural Skin",
-        categoria: "rostro",
-        precio: 95,
-        descripcion: "Base de maquillaje con varios tonos disponibles.",
-        imagen: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "FAVORITO"
-    },
-    {
-        id: 2,
-        nombre: "Labial Velvet",
-        categoria: "labios",
-        precio: 45,
-        descripcion: "Color elegante para complementar tu estilo.",
-        imagen: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "DESTACADO"
-    },
-    {
-        id: 3,
-        nombre: "Paleta Golden Glow",
-        categoria: "ojos",
-        precio: 120,
-        descripcion: "Tonos neutros y luminosos para tus looks.",
-        imagen: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "COLECCIÓN"
-    },
-    {
-        id: 4,
-        nombre: "Rubor Nude",
-        categoria: "rostro",
-        precio: 55,
-        descripcion: "Un toque de color para completar tu maquillaje.",
-        imagen: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "NUEVO"
-    },
-    {
-        id: 5,
-        nombre: "Gloss Brillante",
-        categoria: "labios",
-        precio: 35,
-        descripcion: "Brillo labial para un acabado luminoso.",
-        imagen: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "FAVORITO"
-    },
-    {
-        id: 6,
-        nombre: "Máscara de Pestañas",
-        categoria: "ojos",
-        precio: 60,
-        descripcion: "Un básico para completar tu mirada.",
-        imagen: "https://images.unsplash.com/photo-1631214540242-6a7c7f1e0b31?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "ESENCIAL"
-    },
-    {
-        id: 7,
-        nombre: "Agua Micelar",
-        categoria: "cuidado",
-        precio: 50,
-        descripcion: "Producto de limpieza facial para tu rutina.",
-        imagen: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "CUIDADO"
-    },
-    {
-        id: 8,
-        nombre: "Crema Hidratante",
-        categoria: "cuidado",
-        precio: 75,
-        descripcion: "Hidratación para acompañar tu rutina facial.",
-        imagen: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80",
-        etiqueta: "ESENCIAL"
-    }
+    { id: 1, nombre: "Amber", categoria: "rostro", imagen: "img/productos/Amber.jpg" },
+    { id: 2, nombre: "Berry Blush", categoria: "rostro", imagen: "img/productos/Berry Blush.jpg" },
+    { id: 3, nombre: "Berry Dew", categoria: "rostro", imagen: "img/productos/Berry Dew.jpg" },
+    { id: 4, nombre: "Black Edge", categoria: "ojos", imagen: "img/productos/Black Edge.jpg" },
+    { id: 5, nombre: "Black Volumize", categoria: "ojos", imagen: "img/productos/Black Volumize.jpg" },
+    { id: 6, nombre: "Bronze Dew", categoria: "rostro", imagen: "img/productos/Bronze Dew.jpg" },
+    { id: 7, nombre: "Cherry Blossom", categoria: "rostro", imagen: "img/productos/Cherry Blossom.jpg" },
+    { id: 8, nombre: "Cherry Glow", categoria: "labios", imagen: "img/productos/Cherry Glow.jpg" },
+    { id: 9, nombre: "City Lights", categoria: "ojos", imagen: "img/productos/City Lights.jpg" },
+    { id: 10, nombre: "Cocoa Line", categoria: "labios", imagen: "img/productos/Cocoa Line.jpg" },
+    { id: 11, nombre: "Coral Kiss", categoria: "labios", imagen: "img/productos/Coral Kiss.jpg" },
+    { id: 12, nombre: "Coral Shine", categoria: "labios", imagen: "img/productos/Coral Shine.jpg" },
+    { id: 13, nombre: "Crema Hidratante", categoria: "cuidado", imagen: "img/productos/crema-hidratante.jpg" },
+    { id: 14, nombre: "Crema 2", categoria: "cuidado", imagen: "img/productos/crema2.jpg" },
+    { id: 15, nombre: "Essential Brushes", categoria: "rostro", imagen: "img/productos/Essential Brushes.jpg" },
+    { id: 16, nombre: "Golden Hour", categoria: "ojos", imagen: "img/productos/Golden Hour.jpg" },
+    { id: 17, nombre: "Honey Warmth", categoria: "rostro", imagen: "img/productos/Honey Warmth.jpg" },
+    { id: 18, nombre: "Labial 1", categoria: "labios", imagen: "img/productos/labial1.jpg" },
+    { id: 19, nombre: "Natural Matte", categoria: "rostro", imagen: "img/productos/Natural Matte.jpg" },
+    { id: 20, nombre: "Nude Whisper", categoria: "labios", imagen: "img/productos/Nude Whisper.jpg" },
+    { id: 21, nombre: "Peachy Pink", categoria: "rostro", imagen: "img/productos/Peachy Pink.jpg" },
+    { id: 22, nombre: "Pink Romance", categoria: "labios", imagen: "img/productos/Pink Romance.jpg" },
+    { id: 23, nombre: "Pure Radiance", categoria: "rostro", imagen: "img/productos/Pure Radiance.jpg" },
+    { id: 24, nombre: "Raspberry", categoria: "labios", imagen: "img/productos/Raspberry.jpg" },
+    { id: 25, nombre: "Ruby", categoria: "labios", imagen: "img/productos/Ruby.jpg" },
+    { id: 26, nombre: "Serum", categoria: "cuidado", imagen: "img/productos/serum.jpg" },
+    { id: 27, nombre: "Smooth Application", categoria: "rostro", imagen: "img/productos/Smooth Application.jpg" },
+    { id: 28, nombre: "Soft Rose", categoria: "labios", imagen: "img/productos/Soft Rose.jpg" },
+    { id: 29, nombre: "Sweet Blush", categoria: "rostro", imagen: "img/productos/Sweet Blush.jpg" },
+    { id: 30, nombre: "Velvet Wine", categoria: "labios", imagen: "img/productos/Velvet Wine.jpg" },
+    { id: 31, nombre: "Warm Brown", categoria: "ojos", imagen: "img/productos/Warm Brown.jpg" },
+    { id: 32, nombre: "Warm Mocha", categoria: "rostro", imagen: "img/productos/Warm Mocha.jpg" }
 ];
 
 // El carrito empieza vacío.
@@ -104,8 +62,11 @@ function formatoPrecio(precio) {
    MOSTRAR PRODUCTOS
    ===================================== */
 
+
 function mostrarProductos(categoria = "todos") {
     const contenedor = document.getElementById("lista-productos");
+
+    if (!contenedor) return;
 
     const filtrados = categoria === "todos"
         ? productos
@@ -127,16 +88,11 @@ function mostrarProductos(categoria = "todos") {
         imagen.alt = producto.nombre;
         imagen.loading = "lazy";
 
-        // Si una fotografía falla, se oculta sin romper la tarjeta.
         imagen.addEventListener("error", () => {
             imagen.style.display = "none";
         });
 
-        const etiqueta = document.createElement("span");
-        etiqueta.className = "etiqueta-producto";
-        etiqueta.textContent = producto.etiqueta;
-
-        imagenContenedor.append(imagen, etiqueta);
+        imagenContenedor.appendChild(imagen);
 
         const informacion = document.createElement("div");
         informacion.className = "producto-info";
@@ -144,24 +100,23 @@ function mostrarProductos(categoria = "todos") {
         const nombre = document.createElement("h3");
         nombre.textContent = producto.nombre;
 
-        const descripcion = document.createElement("p");
-        descripcion.className = "producto-descripcion";
-        descripcion.textContent = producto.descripcion;
-
-        const precio = document.createElement("p");
-        precio.className = "producto-precio";
-        precio.textContent = formatoPrecio(producto.precio);
-
         const boton = document.createElement("button");
         boton.className = "boton-agregar";
-        boton.textContent = "AÑADIR A MI BOLSA";
-        boton.addEventListener("click", () => agregarAlCarrito(producto.id));
+        boton.textContent = "CONSULTAR POR WHATSAPP";
 
-        informacion.append(nombre, descripcion, precio, boton);
+        boton.addEventListener("click", () => {
+            const mensaje =
+                `Hola, BEAUTY LINE. Quisiera consultar por el producto ${producto.nombre}.`;
+
+            abrirWhatsApp(mensaje);
+        });
+
+        informacion.append(nombre, boton);
         tarjeta.append(imagenContenedor, informacion);
         contenedor.appendChild(tarjeta);
     });
 }
+
 
 /* =====================================
    FILTROS DE CATEGORÍAS

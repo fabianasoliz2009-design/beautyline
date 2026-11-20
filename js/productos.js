@@ -68,7 +68,7 @@ if (catalogo) {
         titulo.textContent = nombre;
 
         const enlace = document.createElement("a");
-        const mensaje = `Hola, BEAUTY LINE. Quisiera consultar por el producto ${nombre}.`;
+        const mensaje = `Hola, BEAUTY LINE. Quisiera consultar por el producto ${nombre}. ¿Podrían brindarme más información sobre este producto?`;
 
         enlace.href =
             "https://wa.me/59171716971?text=" +
